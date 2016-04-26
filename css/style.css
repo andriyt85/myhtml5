@@ -61,10 +61,10 @@ section {
 	background: radial-gradient(circle, #e6ffe6, #e6e6ff);
 	margin-top: -24px;
 }
-section h3, section h1 {
+section h2, section h4 {
 	text-align: center;
 } 
-art p {
+.art p {
 	text-align:left;
 	margin: 5px 10px 5px 10px;
 	text-indent: 15px;
