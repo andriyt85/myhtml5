@@ -140,7 +140,10 @@
         });        
         $('.store').change(function () {
             localStorage[$(this).attr('name')] = $(this).val();
-        });       
+        }); 
+        $('#repl').submit(function() {
+            localStorage.clear();
+        });
    </script>
 </body>
 </html>
