@@ -1,10 +1,6 @@
 * {
 	box-sizing: border-box;
 }
-p {
-	margin: 5px 10px 5px 10px;
-	text-indent: 15px;
-}	
 body {
 	font-size: 100%;
 	font-family: arial, serif;
@@ -70,6 +66,8 @@ section h3, section h1 {
 } 
 art p {
 	text-align:left;
+	margin: 5px 10px 5px 10px;
+	text-indent: 15px;
 }
 /*FOOTER*/
 footer {

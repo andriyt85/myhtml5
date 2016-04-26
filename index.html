@@ -9,7 +9,6 @@
 <body id="home">
     <header>
         <h1>HTML5 project page</h1>   
-   
         <nav>
              <ul>
                 <li><a href="#home">Home</a></li>
@@ -23,37 +22,36 @@
     <aside>
        <form id="repl" method="post" action="">
            <fieldset style="width: 40%; margin: 0 auto;">
-		    <legend><strong>Some information about you</strong></legend>
-		        <label><b>Name</b><br/></label>
-                <input type="text" id="name" name="name" size="40" class="store" value="" autofocus required/><br/><br/>
+            <legend><strong>Some information about you</strong></legend>
+                <label><b>First name</b><br/></label>
+                <input type="text" id="name" name="name" size="40" class="store" value="" placeholder="Please enter your first name" autofocus required/><br/><br/>
                 <label><b>Last name</b></label><br/>
-                <input type="text" id="lname" name="lname" size="40" class="store" value="" required/><br/><br/>
+                <input type="text" id="lname" name="lname" size="40" class="store" value="" placeholder="Please enter your last name" required/><br/><br/>
                 <label><b>E-mail</b></label><br/>
-                <input type="email" id="email" name="email" size="40" class="store" value="" required/><br/><br/>
-                <label><b>Age</b></label><br/>
-                <input type="number" id="age" name="age" size="40" class="store" value="" required/><br/><br/>
+                <input type="email" id="email" name="email" size="40" class="store" value="" placeholder="Please enter your e-mail" required/><br/><br/>
                 <label><b>Phone</b></label><br/>
-                <input type="tel" id="tel" name="tel" size="40" class="store" value="" /><br/><br/>
+                <input type="tel" id="tel" name="tel" size="40" class="store" value="" placeholder="Please enter your phone number" /><br/><br/>
                 <label><b>Address</b></label><br/>
-                <input type="text" id="addr" name="address" size="40" class="store" value="" /><br/><br/>
+                <input type="text" id="addr" name="address" size="40" class="store" value="" placeholder="Please enter your address" /><br/><br/>
+                <label><b>Age</b></label><br/>
+                <input type="number" id="age" name="age" size="40" class="store" value="" placeholder="Please enter your age" required/><br/><br/>
                 <label><b>Birthday</b></label><br/>
-                <input type="date" name="birthday" id="birthday" class="store"size="40" value="" /><br/><br/>
+                <input type="date" name="birthday" id="birthday" class="store" size="40" value="" /><br/><br/>
                 <input type="radio" name="gender" value="male" checked> Male
                 <input type="radio" name="gender" value="female"> Female<br/><br/>
                 <label><b>Professional skills</b></label><br/>
                 <textarea name="skills" id="skil" cols="35" rows="5"></textarea><br/><br/>
                 <label><b>Hobby</b></label><br/>
                 <textarea name="hobby" id="hobby" cols="35" rows="5"></textarea><br/><br/>
-                
                 <input type="submit" value="Send">
-                <input type="reset" value="Reset">
+                <input type="reset" id="reset" value="Reset">
             </fieldset>   
        </form>
     </aside>
     <section>
-        <h1 style="font-size: 2em;">WEB UI</h1>
+        <h2 style="font-size: 2em;">WEB UI</h2>
         <article class="art">
-            <h3>HTML5</h3>
+            <h4>HTML5</h4>
             <p>HTML5 — наступна версія мови HTML. До складу робочої групи з HTML5 увійшли 
             AOL, Apple, Google, IBM, Microsoft, Mozilla, Nokia, Opera та кілька сотень інших виробників.
             Існує деяка плутанина щодо версійності, оскільки існують дві незалежні групи розробників — 
@@ -77,7 +75,7 @@
             з відео, графікою і анімацією, що надає розширені мережеві можливості.</p>
         </article>
         <article class="art">
-            <h3>CSS3</h3>
+            <h4>CSS3</h4>
             <p>Каскадні таблиці стилів (англ. Cascading Style Sheets або скорочено CSS) — спеціальна мова, що
             використовується для опису сторінок, написаних мовами розмітки даних. Найчастіше CSS використовують
             для візуальної презентації сторінок, написаних HTML та XHTML, але формат CSS може застосовуватися до 
@@ -90,7 +88,7 @@
             верстки — розділення змісту сторінки (даних) та їхньої візуальної презентації.</p>
         </article>
         <article class="art">
-            <h3>JavaScript</h3>
+            <h4>JavaScript</h4>
             <p>JavaScript (JS) — динамічна, об'єктно-орієнтованa мова програмування. Реалізація стандарту ECMAScript.
             Найчастіше використовується як частина браузера, що надає можливість коду на стороні клієнта (такому, що
             виконується на пристрої кінцевого користувача) взаємодіяти з користувачем, керувати браузером, асинхронно
@@ -109,13 +107,15 @@
     </section>
     <footer>
         <p><small>&copy; All rights reserved.</small></p>
-        <p> <address id="contact">
-        Мій E-mail: <a href="mailto:andriyt85@ukr.net">Тарновський Андрій</a>.<br>
-        Адреса: м."Івано-Франківськ"
-        вул.Галицька 100
-        Телефон: (098) 777-77-77
-        Skype: andriyt85       
-    </address></p>
+        <p>
+            <address id="contact">
+                Мій E-mail: <a href="mailto:andriyt85@example.com">Тарновський Андрій</a>.<br>
+                Адреса: м."Івано-Франківськ"
+                вул.Галицька 100
+                Телефон: (098) 777-77-77
+                Skype: andriyt85       
+            </address>
+        </p>
     </footer>
     <script type="text/javascript">
         $(document).ready(function () {
@@ -141,9 +141,9 @@
         $('.store').change(function () {
             localStorage[$(this).attr('name')] = $(this).val();
         }); 
-        $('#repl').submit(function() {
+        $('#reset').click(function() {
             localStorage.clear();
-        });
+        }); 
    </script>
 </body>
 </html>
