@@ -1,3 +1,33 @@
+.flcontainer {
+    display: -webkit-flex;
+    display: flex;  
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap
+ }
+
+.flcontainer > * {
+    flex: 1 100%;
+}
+@media all and (min-width: 600px) {
+    .flaside { 
+    	flex: 1 auto; 
+    	margin-bottom: 35px;
+    }
+}
+@media all and (min-width: 800px) {
+    .flsection    { 
+    	flex: 3 0px;
+    }
+    .flaside {
+    	 order: 1;
+    } 
+    .flsection {
+     	order: 2; 
+    }
+    .flfooter {
+    	 order: 4; 
+    }    
+}
 * {
 	box-sizing: border-box;
 }
@@ -9,6 +39,7 @@ body {
 	margin-top: 0;
 	height: auto;
 	background-color: #e6e6e6;
+	padding: 2em; 
 }
 /*HEADER*/
 header {
@@ -45,15 +76,15 @@ a:hover {
 	color:red;
 }
 /*ASIDE*/
-aside {
+.flaside {
 	float: left;
-	height:auto;
-	width: 30%;
+	height:50%;
+	width: 10%;
 	background: -webkit-linear-gradient(bottom, #336600, #ccff99);
 	margin-top: -24px;
 }
 /*SECTION*/
-section {
+.flsection {
 	float: right;
 	height: auto;
 	width: 70%;
@@ -61,7 +92,7 @@ section {
 	background: radial-gradient(circle, #e6ffe6, #e6e6ff);
 	margin-top: -24px;
 }
-section h2, section h4 {
+.flsection h2, .flsection h4 {
 	text-align: center;
 } 
 .art p {
