@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/style.css">
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/script.js"></script>
     <title>Document</title>
 </head>
 <body id="home">
@@ -44,7 +45,7 @@
                 <label><b>Hobby</b></label><br/>
                 <textarea name="hobby" id="hobby" cols="35" rows="5"></textarea><br/><br/>
                 <input type="submit" value="Send">
-                <input type="reset" id="reset" value="Reset">
+                <input type="reset" id="reset" value="Reset" onclick="pauseVideo()">
             </fieldset>   
        </form>
     </aside>
@@ -117,33 +118,5 @@
             </address>
         </p>
     </footer>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            function init() {
-                if (localStorage["name"]) {
-                    $('#name').val(localStorage["name"]);
-                }
-                if (localStorage["lname"]) {
-                    $('#lname').val(localStorage["lname"]);
-                }
-                if (localStorage["email"]) {
-                    $('#email').val(localStorage["email"]);
-                }
-        		if (localStorage["age"]) {
-                    $('#age').val(localStorage["age"]);
-                }
-                if (localStorage["birthday"]) {
-                    $('#birthday').val(localStorage["birthday"]);
-                }
-            }
-        	init();
-        });        
-        $('.store').change(function () {
-            localStorage[$(this).attr('name')] = $(this).val();
-        }); 
-        $('#reset').click(function() {
-            localStorage.clear();
-        }); 
-   </script>
 </body>
 </html>
