@@ -3,8 +3,7 @@
     display: flex;  
     -webkit-flex-flow: row wrap;
     flex-flow: row wrap
- }
-
+}
 .flcontainer > * {
     flex: 1 100%;
 }
@@ -39,7 +38,6 @@ body {
 	margin-top: 0;
 	height: auto;
 	background-color: #e6e6e6;
-	padding: 2em; 
 }
 /*HEADER*/
 header {
