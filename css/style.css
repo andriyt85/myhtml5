@@ -1,10 +1,35 @@
+.flcontainer {
+    display: -webkit-flex;
+    display: flex;  
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap
+ }
+
+.flcontainer > * {
+    flex: 1 100%;
+}
+@media all and (min-width: 600px) {
+    .flaside { 
+    	flex: 1 auto; 
+    }
+}
+@media all and (min-width: 800px) {
+    .flsection    { 
+    	flex: 3 0px;
+    }
+    .flaside {
+    	 order: 1;
+    } 
+    .flsection {
+     	order: 2; 
+    }
+    .flfooter {
+    	 order: 4; 
+    }    
+}
 * {
 	box-sizing: border-box;
 }
-p {
-	margin: 5px 10px 5px 10px;
-	text-indent: 15px;
-}	
 body {
 	font-size: 100%;
 	font-family: arial, serif;
@@ -13,6 +38,7 @@ body {
 	margin-top: 0;
 	height: auto;
 	background-color: #e6e6e6;
+	padding: 2em; 
 }
 /*HEADER*/
 header {
@@ -49,27 +75,29 @@ a:hover {
 	color:red;
 }
 /*ASIDE*/
-aside {
-	float: left;
-	height:auto;
-	width: 30%;
+.flaside {
+	height:50%;
+	min-width: 250px;
+	width: 10%;
 	background: -webkit-linear-gradient(bottom, #336600, #ccff99);
 	margin-top: -24px;
+	margin-bottom: 30px;
 }
 /*SECTION*/
-section {
-	float: right;
+.flsection {
 	height: auto;
 	width: 70%;
 	background-color: #ccff99;
 	background: radial-gradient(circle, #e6ffe6, #e6e6ff);
 	margin-top: -24px;
 }
-section h3, section h1 {
+.flsection h2, .flsection h4 {
 	text-align: center;
 } 
-art p {
+.art p {
 	text-align:left;
+	margin: 5px 10px 5px 10px;
+	text-indent: 15px;
 }
 /*FOOTER*/
 footer {
