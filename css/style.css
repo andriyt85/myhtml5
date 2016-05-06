@@ -4,7 +4,6 @@
     -webkit-flex-flow: row wrap;
     flex-flow: row wrap
  }
-
 .flcontainer > * {
     flex: 1 100%;
 }
@@ -100,9 +99,6 @@ a:hover {
 	text-indent: 15px;
 }
 /*FOOTER*/
-footer {
-	clear: both;
-}
 address {
 	opacity: 0.2;
 }
